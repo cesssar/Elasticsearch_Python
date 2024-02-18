@@ -4,6 +4,7 @@
 
 <img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white" /> <img src="https://img.shields.io/badge/docker-%230db7ed.svg?style=for-the-badge&logo=docker&logoColor=white" /> <img src="https://img.shields.io/badge/-ElasticSearch-005571?style=for-the-badge&logo=elasticsearch" />
 
+<img src="https://github.com/cesssar/Elasticsearch_Python/blob/main/Screenshot.png" />
 
 ### Estrutura
 
@@ -113,7 +114,7 @@ Passos:
 A visualização criada exibirá um gráfico de barras com quantidade de logs por nível (informativo, aviso, erro e crítico).
 
 
-<img src="https://github.com/cesssar/Elasticsearch_Python/blob/main/Screenshot.png" />
+
 
 
 ### Referências
