@@ -1,0 +1,9 @@
+version: '3.6'
+
+services:
+  robo:
+    build: .
+    container_name: robo_com_logs
+
+
+    
