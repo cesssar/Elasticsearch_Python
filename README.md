@@ -1,16 +1,24 @@
 # Monitorando logs de app Python com Elasticsearch e Kibana
 
-> Utiliza Docker para executar servidor Elasticsearch e Kibana a fim de monitorar logs de aplicação Python exemplo
+> Utiliza Docker para executar servidor Elasticsearch e Kibana a fim de monitorar logs de aplicação Python através do Filebeat
 
 <img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white" /> <img src="https://img.shields.io/badge/docker-%230db7ed.svg?style=for-the-badge&logo=docker&logoColor=white" /> <img src="https://img.shields.io/badge/-ElasticSearch-005571?style=for-the-badge&logo=elasticsearch" />
 
 
-## 💻 Pré-requisitos
+### Estrutura
+
+- Contâiner app Python: salva logs em arquivo JSON
+- Contâiner Filebeat: copia os logs e salva no Elasticsearch
+- Contâiner Elasticsearch: servidor que processa, armazena e disponibiliza dados em JSON
+- Contâiner Kibana: provẽ a interface web com visualizações dos dados salvos no Elasticsearch
+
+
+### Pré-requisitos
 
 - Docker 
 
 
-## 💻 Elasticsearch
+### Elasticsearch
 
 Executar os comandos abaixo para criar o servidor Elasticsearch
 
@@ -27,7 +35,7 @@ sudo sysctl -w vm.max_map_count=262144
 ```
 
 
-## 💻 Gerar senha e token
+### Gerar senha e token
 
 Gerar senha para usuário elastic
 
@@ -42,7 +50,7 @@ docker exec -it es01 /usr/share/elasticsearch/bin/elasticsearch-create-enrollmen
 ```
 
 
-## 💻 Configurar arquivo filebeat.yml
+### Configurar arquivo filebeat.yml
 
 Editar o arquivo filebeat.yml com o IP da máquina que está executando os containers Docker. Linhas abaixo em destaque onde deve-se trocar o IP.
 
@@ -58,7 +66,7 @@ Na linha password alterar para a senha gerada na etapa "Gerar senha e token"
 password: "6sLjmJle2ISmPhAdw8qZ"
 
 
-## 🚀 Kibana
+### Kibana
 
 Executar os seguintes comandos para executar o Kibana no Docker
 
@@ -70,7 +78,7 @@ docker run -d --name kib01 --net elastic -v ./kibana_data:/usr/share/kibana/data
 Ao executar será gerado um link para acessar a configuração do Kibana. Acessar o link, a tela irá pedir o token de acesso gerado na etapa anterior.
 
 
-## 🚀 Executar o aplicativo Python
+### Executar o aplicativo Python
 
 Executar o comando abaixo para construir a imagem com o aplicativo:
 
@@ -85,7 +93,7 @@ docker-compose up -d
 ```
 
 
-## 💻 Configurar um dashboard com visualização dos logs 
+### Configurar um dashboard com visualização dos logs 
 
 Acessar o site http://0.0.0.0:5601 com login elastic e a senha gerada na etapa "Gerando senha e token".
 
