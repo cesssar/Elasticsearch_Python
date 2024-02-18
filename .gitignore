@@ -3,3 +3,4 @@ eslog/
 kibana_data/
 notas/
 venv/
+app_logs/

@@ -3,7 +3,7 @@ filebeat.inputs:
   id: robo1
   enabled: true
   paths:
-    - /app/*.json
+    - /app_logs/*.json
   json.keys_under_root: true
   json.overwrite_keys: true
   json.add_error_key: true

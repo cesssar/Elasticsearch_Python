@@ -78,18 +78,12 @@ Executar o comando abaixo para construir a imagem com o aplicativo:
 docker-compose build 
 ```
 
-O comando abaixo irá subir um container a partir da imagem gerada acima:
+O comando abaixo irá subir um container a partir da imagem gerada acima para o aplicativo Python e um container para o Filebeat
 
 ```
 docker-compose up -d
 ```
 
-
-Executar o comando abaixo para iniciar o Filebeat dentro do container
-
-```
-docker exec robo_com_logs bash -c "systemctl start filebeat"
-```
 
 ## 💻 Configurar um dashboard com visualização dos logs 
 
