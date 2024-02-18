@@ -111,6 +111,9 @@ Passos:
 A visualização criada exibirá um gráfico de barras com quantidade de logs por nível (informativo, aviso, erro e crítico).
 
 
+<img src="https://github.com/cesssar/Elasticsearch_Python/blob/main/Screenshot.png" />
+
+
 ### Referências
 
 [https://www.elastic.co/guide/en/cloud-enterprise/current/ece-getting-started-search-use-cases-python-logs.html]
